@@ -85,21 +85,6 @@ export default function AuctionPage() {
       {/* Main Content */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-start p-4 md:p-6 overflow-y-auto">
 
-        {players.length === 0 && !loading && (
-          <div className="mt-5">
-            <p className="text-slate-400 text-sm mb-3 font-body">
-              No players found. Load sample players to get started.
-            </p>
-            <button
-              onClick={handleSeed}
-              disabled={seeding}
-              className="btn-gold px-6 py-2.5 rounded-xl text-sm"
-              style={{ letterSpacing: '0.08em' }}
-            >
-              {seeding ? 'Loading...' : '🎯 Load Sample Players'}
-            </button>
-          </div>
-        )}
 
         {loading ? (
           <div className="flex flex-col mt-20  items-center gap-4">
